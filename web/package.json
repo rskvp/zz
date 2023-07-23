@@ -1,0 +1,60 @@
+{
+	"name": "train-station-front",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"e2e": "playwright test",
+		"e2e:debug": "PWDEBUG=1 playwright test",
+		"gen:e2e": "playwright codegen --load-storage=playwright/.auth/auth.json http://localhost:4173",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+		"test": "vitest",
+		"lint": "prettier --plugin-search-dir . --check . && eslint .",
+		"format": "prettier --plugin-search-dir . --write .",
+		"depcheck": "depcheck"
+	},
+	"pnpm": {
+		"overrides": {
+			"@auth/core": "latest"
+		}
+	},
+	"devDependencies": {
+		"@auth/core": "0.8.4",
+		"@auth/sveltekit": "0.3.3",
+		"@grpc/grpc-js": "1.8.16",
+		"@picocss/pico": "1.5.10",
+		"@playwright/test": "1.35.1",
+		"@protobuf-ts/grpc-transport": "2.9.0",
+		"@protobuf-ts/runtime": "2.9.0",
+		"@protobuf-ts/runtime-rpc": "2.9.0",
+		"@sveltejs/adapter-node": "1.2.4",
+		"@sveltejs/kit": "1.20.4",
+		"@types/node": "20.3.1",
+		"@typescript-eslint/eslint-plugin": "5.60.0",
+		"@typescript-eslint/parser": "5.60.0",
+		"autoprefixer": "10.4.14",
+		"depcheck": "1.4.3",
+		"eslint": "8.43.0",
+		"eslint-config-prettier": "8.8.0",
+		"eslint-plugin-svelte": "2.31.0",
+		"just-clone": "6.2.0",
+		"material-symbols": "0.8.0",
+		"next-auth": "4.22.1",
+		"postcss": "8.4.24",
+		"prettier": "2.8.8",
+		"prettier-plugin-svelte": "2.10.1",
+		"sass": "1.63.6",
+		"svelte": "4.0.0",
+		"svelte-check": "3.4.4",
+		"tailwindcss": "3.3.2",
+		"tslib": "2.5.3",
+		"typescript": "5.1.3",
+		"vite": "4.3.9",
+		"vite-imagetools": "5.0.4",
+		"vitest": "0.32.2"
+	},
+	"type": "module"
+}

@@ -1,0 +1,24 @@
+version: v1
+managed:
+  enabled: true
+  cc_enable_arenas: false
+  go_package_prefix:
+    default: zz/proto/gen
+  optimize_for: LITE_RUNTIME
+plugins:
+  - name: go
+    out: ./protos/gen
+    opt:
+      - paths=source_relative
+  - name: go-grpc
+    out: ./protos/gen
+    opt:
+      - paths=source_relative
+  - name: ts
+    out: ./web/gen
+  - name: doc
+    out: ./docs
+    opt:
+      - markdown
+      - index.md
+      - source_relative

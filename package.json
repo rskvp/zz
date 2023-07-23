@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@protobuf-ts/plugin": "^2.9.0",
+    "@protobuf-ts/runtime": "^2.9.0",
+    "@protobuf-ts/runtime-rpc": "^2.9.0"
+  }
+}
